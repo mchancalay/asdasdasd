@@ -1,0 +1,42 @@
+@use '../../scss/base/colors';
+
+.scrollDown {
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        color: colors.$color-secondary;
+    }
+
+    &__text {
+        color: colors.$color-secondary;
+    }
+
+    &__link:hover &__icon {
+        animation: scroll-down 1s infinite;
+    }
+}
+
+@keyframes scroll-down {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    35% {
+        transform: translateY(0.5rem);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(-0.5rem);
+        opacity: 0;
+    }
+}

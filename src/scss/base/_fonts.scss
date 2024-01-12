@@ -1,0 +1,35 @@
+@use '../../scss/base/colors';
+@use '../../scss/abstracts/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$font-poppins: variables.$var-font-family;
+
+* {
+    font-family: $font-poppins;
+}
+
+$general-font-sizes: (
+    "h1": 22px,
+    "h2": 20px,
+    "h3": 16px,
+    "h4": 16px,
+    "h5": 16px,
+    "h6": 16px,
+    "p": 16px,
+    "a": 16px,
+    button: 16px
+);
+
+//  ***********************
+//  *** asignacion maps ***
+//  ***********************
+
+//  font map
+@each $tag, $size in $general-font-sizes {
+    #{$tag} {
+        font-size: $size;
+        font-weight: variables.$var-font-weight-default;
+        color: variables.$var-font-color;
+    }
+}

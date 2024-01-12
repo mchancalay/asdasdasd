@@ -1,0 +1,26 @@
+@use '../../scss/base/colors';
+@use '../../scss/abstracts/variables';
+
+.footer {
+    background-color: colors.$color-dark-blue;
+    width: 100%;
+    height: 100%;
+    padding-top: variables.$var-padding;
+    padding-bottom: variables.$var-padding;
+
+    &__item {
+        text-align: center;
+    }
+
+    &__title {
+        color: colors.$color-light;
+    }
+
+    &__copy {
+        margin-top: 1rem;
+        color: colors.$color-light;
+        font-weight: 300;
+    }
+
+
+}
